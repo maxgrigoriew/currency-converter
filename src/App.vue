@@ -1,9 +1,7 @@
 <template>
    <div>
-      <component :is="layout" />
-      <router-view/>
+      <component :is="layout"/>
    </div>
-
 </template>
 <script>
 export default {
@@ -15,3 +13,5 @@ export default {
    },
 }
 </script>
+<style lang="scss">
+</style>
