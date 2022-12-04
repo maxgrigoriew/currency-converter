@@ -1,14 +1,9 @@
-Skip to content Search or jump to… Pull requests Issues Codespaces Marketplace Explore @maxgrigoriew
-maxgrigoriew / currency-converter Public Code Issues Pull requests Actions Projects Wiki Security
-Insights Settings currency-converter/src/pages/ConverterPage.vue @maxgrigoriew maxgrigoriew added
-pages, layout Latest commit 4f5e42e 3 days ago History 1 contributor 137 lines (112 sloc) 4.1 KB
-
 <template>
     <v-app>
         <v-container>
             <v-row>
                 <v-col cols="10" md="12" lg="9" xl="6" class="bg--light mx-auto">
-                    <h1 class="text-center mb-4">Currency Converter</h1>
+                    <h1 class="text-center mb-4">Конвертер валют</h1>
                     <v-row justify="space-between" no-gutters>
                         <v-col cols="12" md="5">
                             <v-row no-gutters>
@@ -17,7 +12,7 @@ pages, layout Latest commit 4f5e42e 3 days ago History 1 contributor 137 lines (
                                         @change="convert"
                                         v-model="selected[0]"
                                         :items="countries"
-                                        label="I have"
+                                        label="У меня есть"
                                     ></v-select>
                                 </v-col>
 
@@ -54,7 +49,7 @@ pages, layout Latest commit 4f5e42e 3 days ago History 1 contributor 137 lines (
                                         @change="convert"
                                         v-model="selected[1]"
                                         :items="countries"
-                                        label="I want to buy"
+                                        label="Хочу получить"
                                     ></v-select>
                                 </v-col>
                             </v-row>
@@ -122,19 +117,15 @@ export default {
             this.result = result ? Math.floor(result * 10000) / 10000 : null
         },
     },
-
     mounted() {
-        // Request to API URL, getting response
         axios
             .get("https://www.cbr-xml-daily.ru/daily_json.js")
             .then((response) => {
                 this.valutes = response.data.Valute
                 console.log(this.valutes)
-                // Adding all charCodes to array
                 for (let code in response.data.Valute) {
                     this.countries.push(code)
                 }
-                console.log(this.countries)
             })
             .catch((error) => {
                 console.log(error)
@@ -160,6 +151,3 @@ h3 {
     max-width: 50px;
 }
 </style>
-Footer © 2022 GitHub, Inc. Footer navigation Terms Privacy Security Status Docs Contact GitHub
-Pricing API Training Blog About currency-converter/ConverterPage.vue at typescript ·
-maxgrigoriew/currency-converter

@@ -43,7 +43,7 @@
                      <td>{{ valute.Name }}</td>
                      <td>{{ valute.Value }}</td>
                      <td>
-<!--                        {{ valute.Previous }}-->
+                        {{ valute.Previous }}
                         <span v-if="valute.Value > valute.Previous" style="color: green"
                         >▲</span
                         >
@@ -110,8 +110,8 @@ export default {
             let secondValutePrevious = copyValutes[valute].Previous
             let newValuteValue = firstValuteValue / firstValuteNominal / (secondValuteValue / secondValuteNominal)
             let newValutePrevios = firstValutePrevious / secondValutePrevious
-            this.valutes[valute].Value = newValuteValue.toFixed(4)
-            this.valutes[valute].Previous = newValutePrevios.toFixed(4)
+            this.valutes[valute].Value = newValuteValue.toFixed(6)
+            this.valutes[valute].Previous = newValutePrevios.toFixed(6)
          }
          console.log(this.defaultValute)
       }
