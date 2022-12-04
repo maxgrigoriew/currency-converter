@@ -14,4 +14,7 @@ export default {
 }
 </script>
 <style lang="scss">
+#app {
+   background-size: 400% 400%;
+}
 </style>

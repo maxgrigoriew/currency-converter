@@ -2,7 +2,6 @@ import Vue from "vue"
 import VueRouter from "vue-router"
 import ConverterPage from "@/pages/ConverterPage"
 import CurrencyPage from "@/pages/CurrencyPage"
-import TestPage from "@/pages/TestPage"
 Vue.use(VueRouter)
 
 const routes = [
@@ -16,13 +15,6 @@ const routes = [
     {
         path: "/currency",
         component: CurrencyPage,
-        meta: {
-            layout: "MainLayout",
-        },
-    },
-    {
-        path: "/test",
-        component: TestPage,
         meta: {
             layout: "MainLayout",
         },

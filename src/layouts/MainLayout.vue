@@ -12,10 +12,6 @@
                             <v-list-item-content>
                                 <v-list-item-title>{{ item.title }}</v-list-item-title>
                             </v-list-item-content>
-
-                            <v-list-item-content>
-                                <v-list-item-title>{{ item.title }}</v-list-item-title>
-                            </v-list-item-content>
                         </v-list-item>
                     </v-list>
                 </v-navigation-drawer>
@@ -37,7 +33,6 @@ export default {
             items: [
                 { title: "Конвертор валют", icon: "mdi-home-city", link: "/" },
                 { title: "Курс валют", icon: "mdi-account", link: "/currency" },
-                { title: "Тестовая страница", icon: "mdi-account", link: "/test" },
             ],
             mini: true,
         }

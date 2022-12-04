@@ -133,21 +133,4 @@ export default {
     },
 }
 </script>
-<style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
-#app {
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-}
-h1,
-h2,
-h3 {
-    font-family: "Indie Flower";
-}
-.bg--light {
-    background: #fcfcfc;
-}
-.exchange {
-    max-width: 50px;
-}
-</style>
+
